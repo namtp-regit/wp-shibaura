@@ -13,7 +13,9 @@ get_header();
         <div class="container-c">
             <div class="activity-1" data-aos="fade-up" data-aos-duration="600">
                 <h4 class="txt">芝浦文化財団コンサート</h4>
-                <div class="desc">障害を持ち音楽に取り組んだり楽しんだりしている誰もが主役になれる日として、芝浦文化財団コンサートを企画・開催しています。それぞれの可能性にチャレンジするとともに、素晴らしい出会いの場として今後も活動してまいります。</div>
+                <?php if(have_posts()) :the_post(); ?>
+                <div class="desc"><?php the_content() ?>
+                <?php endif; ?>
             </div>
 
             <div class="activity-2">
