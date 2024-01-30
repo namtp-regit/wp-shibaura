@@ -1166,8 +1166,7 @@ p {
   line-height: 35px;
   margin-bottom: 22px; }
 #page-activity .activity-1 .desc {
-  line-height: 26px;
-  white-space: pre-line; }
+  line-height: 26px; }
 @media (max-width: 767.98px) {
   #page-activity .activity-1 .txt {
     margin-bottom: 17px; } }
