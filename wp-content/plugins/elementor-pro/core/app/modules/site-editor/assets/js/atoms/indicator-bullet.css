@@ -1,0 +1,54 @@
+/*
+Error: Undefined operation: "spacing(16) times 0.75".
+        on line 12 of D:\workspace\wp\wp-shibaura\wp-content\plugins\elementor-pro\core\app\modules\site-editor\assets\js\atoms\indicator-bullet.scss
+
+7: 
+8: .eps-theme-dark {
+9: 	--indicator-bullet-border-color: #{$eps-indicator-bullet-dark-border-color};
+10: }
+11: 
+12: $eps-indicator-bullet-size: spacing(16) * 0.75;
+13: $eps-indicator-bullet-color: tints(300);
+14: $eps-indicator-bullet-color-active: theme-colors(success);
+15: $eps-indicator-bullet-box-shadow: $eps-box-shadow-1;
+16: $eps-indicator-bullet-radius: 100%;
+17: $eps-indicator-bullet-border: 2px solid var(--indicator-bullet-border-color);
+
+Backtrace:
+D:\workspace\wp\wp-shibaura\wp-content\plugins\elementor-pro\core\app\modules\site-editor\assets\js\atoms\indicator-bullet.scss:12
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/script/tree/operation.rb:88:in `rescue in _perform'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/script/tree/operation.rb:84:in `_perform'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:482:in `visit_variable'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:20:in `render'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:290:in `render'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:400:in `run'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+D:/app-setup/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+D:/app-setup/bin/sass:22:in `load'
+D:/app-setup/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined operation: \"spacing(16) times 0.75\".\A         on line 12 of D:\workspace\wp\wp-shibaura\wp-content\plugins\elementor-pro\core\app\modules\site-editor\assets\js\atoms\indicator-bullet.scss\A \A 7: \A 8: .eps-theme-dark {\A 9: 	--indicator-bullet-border-color: #{$eps-indicator-bullet-dark-border-color};\A 10: }\A 11: \A 12: $eps-indicator-bullet-size: spacing(16) * 0.75;\A 13: $eps-indicator-bullet-color: tints(300);\A 14: $eps-indicator-bullet-color-active: theme-colors(success);\A 15: $eps-indicator-bullet-box-shadow: $eps-box-shadow-1;\A 16: $eps-indicator-bullet-radius: 100%;\A 17: $eps-indicator-bullet-border: 2px solid var(--indicator-bullet-border-color);"; }

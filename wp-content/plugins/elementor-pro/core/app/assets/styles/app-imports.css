@@ -1,0 +1,75 @@
+/*
+Error: Undefined variable: "$ratio-portrait".
+        on line 4 of D:/workspace/wp/wp-shibaura/wp-content/plugins/elementor-pro/core/app/modules/site-editor/assets/js/molecules/site-template.scss
+        from line 1 of D:\workspace\wp\wp-shibaura\wp-content\plugins\elementor-pro\core\app\assets\styles\app-imports.scss
+
+1: @import "../../modules/site-editor/assets/js/molecules/site-template.scss";
+2: @import "../../modules/site-editor/assets/js/pages/add-new.scss";
+3: @import "../../modules/site-editor/assets/js/pages/template-type.scss";
+4: @import "../../modules/site-editor/assets/js/pages/conditions/conditions.scss";
+5: @import "../../modules/site-editor/assets/js/molecules/back-button.scss";
+6: @import "../../modules/site-editor/assets/js/atoms/indicator-bullet.scss";
+7: @import "../../modules/site-editor/assets/js/atoms/preview-iframe.scss";
+8: @import "../../modules/site-editor/assets/js/site-editor.scss";
+
+Backtrace:
+D:/workspace/wp/wp-shibaura/wp-content/plugins/elementor-pro/core/app/modules/site-editor/assets/js/molecules/site-template.scss:4
+D:\workspace\wp\wp-shibaura\wp-content\plugins\elementor-pro\core\app\assets\styles\app-imports.scss:1
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/script/tree/interpolation.rb:170:in `_perform'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/script/tree/funcall.rb:186:in `perform_arg'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/script/tree/funcall.rb:133:in `block in _perform'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/script/tree/funcall.rb:133:in `each'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/script/tree/funcall.rb:133:in `each_with_index'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/script/tree/funcall.rb:133:in `each'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/script/tree/funcall.rb:133:in `map'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/script/tree/funcall.rb:133:in `_perform'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:482:in `visit_variable'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `block (2 levels) in visit_import'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `map'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:329:in `block in visit_import'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `block in with_import'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:88:in `with_import'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:20:in `render'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:290:in `render'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:400:in `run'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+D:/app-setup/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+D:/app-setup/bin/sass:22:in `load'
+D:/app-setup/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$ratio-portrait\".\A         on line 4 of D:/workspace/wp/wp-shibaura/wp-content/plugins/elementor-pro/core/app/modules/site-editor/assets/js/molecules/site-template.scss\A         from line 1 of D:\workspace\wp\wp-shibaura\wp-content\plugins\elementor-pro\core\app\assets\styles\app-imports.scss\A \A 1: @import \"../../modules/site-editor/assets/js/molecules/site-template.scss\";\A 2: @import \"../../modules/site-editor/assets/js/pages/add-new.scss\";\A 3: @import \"../../modules/site-editor/assets/js/pages/template-type.scss\";\A 4: @import \"../../modules/site-editor/assets/js/pages/conditions/conditions.scss\";\A 5: @import \"../../modules/site-editor/assets/js/molecules/back-button.scss\";\A 6: @import \"../../modules/site-editor/assets/js/atoms/indicator-bullet.scss\";\A 7: @import \"../../modules/site-editor/assets/js/atoms/preview-iframe.scss\";\A 8: @import \"../../modules/site-editor/assets/js/site-editor.scss\";"; }

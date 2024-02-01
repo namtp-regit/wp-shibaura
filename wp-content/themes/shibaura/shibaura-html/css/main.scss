@@ -118,6 +118,39 @@ p {
     text-decoration: none;
 }
 
+.error-404 {
+    padding: 20vh 0;
+
+    .page-header {
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        text-align: center;
+
+        .page-title {
+            font-size: 60px;
+            font-weight: bold;
+        }
+
+        .text {
+            margin-bottom: 8px;
+            font-size: 20px;
+        }
+
+        .desc {
+            a {
+                color: var(--c-main);
+                font-weight: bold;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            width: calc(100% - 40px);
+        }
+    }
+}
+
 @import "./header.scss";
 @import "./footer.scss";
 @import "./top_page.scss";

@@ -1,0 +1,53 @@
+/*
+Error: Undefined variable: "$eps-radius".
+        on line 15 of D:\workspace\wp\wp-shibaura\wp-content\plugins\elementor-pro\core\app\modules\site-editor\assets\js\pages\conditions\conditions-api.scss
+
+10: $e-site-editor-conditions-remove-condition-font-size: type(size, '18');
+11: 
+12: $e-site-editor-conditions-row-controls-spacing-end: spacing(10);
+13: $e-site-editor-conditions-row-controls-background: theme-colors(light);
+14: $e-site-editor-conditions-row-controls-dark-background: dark-tints(600);
+15: $e-site-editor-conditions-row-controls-radius: $eps-radius;
+16: 
+17: $e-site-editor-conditions-row-controls-border: $eps-border-width $eps-border-style tints(100);
+18: $e-site-editor-conditions-row-controls-dark-border: $eps-border-width $eps-border-style tints(700);
+19: //$e-site-editor-conditions-row-controls-dark-border: $eps-border-width $eps-border-style tints(725); //merge after 3.12 is out
+20: $e-site-editor-conditions-row-controls-error-border: $eps-border-width $eps-border-style theme-colors(danger);
+
+Backtrace:
+D:\workspace\wp\wp-shibaura\wp-content\plugins\elementor-pro\core\app\modules\site-editor\assets\js\pages\conditions\conditions-api.scss:15
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:482:in `visit_variable'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:20:in `render'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:290:in `render'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:400:in `run'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+D:/app-setup/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+D:/app-setup/bin/sass:22:in `load'
+D:/app-setup/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$eps-radius\".\A         on line 15 of D:\workspace\wp\wp-shibaura\wp-content\plugins\elementor-pro\core\app\modules\site-editor\assets\js\pages\conditions\conditions-api.scss\A \A 10: $e-site-editor-conditions-remove-condition-font-size: type(size, '18');\A 11: \A 12: $e-site-editor-conditions-row-controls-spacing-end: spacing(10);\A 13: $e-site-editor-conditions-row-controls-background: theme-colors(light);\A 14: $e-site-editor-conditions-row-controls-dark-background: dark-tints(600);\A 15: $e-site-editor-conditions-row-controls-radius: $eps-radius;\A 16: \A 17: $e-site-editor-conditions-row-controls-border: $eps-border-width $eps-border-style tints(100);\A 18: $e-site-editor-conditions-row-controls-dark-border: $eps-border-width $eps-border-style tints(700);\A 19: //$e-site-editor-conditions-row-controls-dark-border: $eps-border-width $eps-border-style tints(725); //merge after 3.12 is out\A 20: $e-site-editor-conditions-row-controls-error-border: $eps-border-width $eps-border-style theme-colors(danger);"; }

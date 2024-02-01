@@ -1,0 +1,54 @@
+/*
+Error: Undefined variable: "$eps-prefix".
+        on line 1 of D:\workspace\wp\wp-shibaura\wp-content\plugins\elementor-pro\core\app\modules\site-editor\assets\js\molecules\back-button.scss
+
+1: .#{$eps-prefix}back-button {
+2: 	font-size: 14px;
+3: 	margin-block-end: spacing(24);
+4: 
+5: 	.#{$eps-prefix}icon {
+6: 		transform: getValueByDirection(rotate(0deg), rotate(180deg));
+
+Backtrace:
+D:\workspace\wp\wp-shibaura\wp-content\plugins\elementor-pro\core\app\modules\site-editor\assets\js\molecules\back-button.scss:1
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/script/tree/variable.rb:49:in `_perform'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/script/tree/interpolation.rb:170:in `_perform'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/script/tree/node.rb:50:in `perform'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:555:in `block in run_interp_no_strip'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:553:in `map'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:553:in `run_interp_no_strip'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:560:in `run_interp'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:423:in `visit_rule'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `block in with_base'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:135:in `with_frame'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/stack.rb:79:in `with_base'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:162:in `visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `map'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/base.rb:36:in `visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:161:in `visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/visitors/perform.rb:10:in `visit'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:36:in `css_tree'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/tree/root_node.rb:20:in `render'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/engine.rb:290:in `render'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:400:in `run'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/exec/sass_scss.rb:63:in `process_result'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:52:in `parse'
+D:/app-setup/rubygems/gems/sass-3.5.2/lib/sass/exec/base.rb:19:in `parse!'
+D:/app-setup/rubygems/gems/sass-3.5.2/bin/sass:13:in `<top (required)>'
+D:/app-setup/bin/sass:22:in `load'
+D:/app-setup/bin/sass:22:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$eps-prefix\".\A         on line 1 of D:\workspace\wp\wp-shibaura\wp-content\plugins\elementor-pro\core\app\modules\site-editor\assets\js\molecules\back-button.scss\A \A 1: .#{$eps-prefix}back-button {\A 2: 	font-size: 14px;\A 3: 	margin-block-end: spacing(24);\A 4: \A 5: 	.#{$eps-prefix}icon {\A 6: 		transform: getValueByDirection(rotate(0deg), rotate(180deg));"; }

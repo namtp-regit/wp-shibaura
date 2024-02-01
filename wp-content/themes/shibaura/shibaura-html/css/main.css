@@ -95,6 +95,23 @@ p {
   color: var(--c-main);
   text-decoration: none; }
 
+.error-404 {
+  padding: 20vh 0; }
+  .error-404 .page-header {
+    text-align: center; }
+    .error-404 .page-header .page-title {
+      font-size: 60px;
+      font-weight: bold; }
+    .error-404 .page-header .text {
+      margin-bottom: 8px;
+      font-size: 20px; }
+    .error-404 .page-header .desc a {
+      color: var(--c-main);
+      font-weight: bold; }
+    @media (max-width: 767.98px) {
+      .error-404 .page-header {
+        width: calc(100% - 40px); } }
+
 #header .container-fluid {
   padding-left: 0;
   padding-right: 0; }
@@ -1218,6 +1235,7 @@ p {
         object-fit: cover;
         transition: 0.5s all; }
         #page-activity .activity-2 .list .item .right .img-box .img:hover {
+          opacity: 0.14;
           transform: scale(1.1, 1.1);
           transition: 0.5s all; }
     #page-activity .activity-2 .list .item .right .media {
