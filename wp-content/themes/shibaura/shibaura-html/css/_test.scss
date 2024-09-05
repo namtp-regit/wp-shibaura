@@ -130,12 +130,12 @@ Version: 2.0.0
     }
 
     &:hover {
+      background-color: red;
         &::before {
 
             transform: scale(1);
             opacity: 1;
         }
-        background-color: red;
     }
     
 }

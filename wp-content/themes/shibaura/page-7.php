@@ -87,62 +87,26 @@ get_header();
     <div class="container-c">
         <h3 class="sharing-title"><span class="mark">音楽</span><span>を奏でる喜びと、</span><span>聴く喜びを共に分かち合う</span></h3>
         <div class="sharing-desc"><?php the_field('sharing_desc'); ?></div>
-    </div>
-    <div class="sharing-img">
-        <div class="left">
-            <img src="<?php the_field('sharing_image_left'); ?>" alt="<?php the_field('title_image_left'); ?>" class="img" data-aos="fade-up" data-aos-duration="600">
-            <p class="text"><?php the_field('title_image_left'); ?></p>
-        </div>
-        <div class="right">
-            <img src="<?php the_field('sharing_image_right'); ?>" alt="<?php the_field('title_image_right'); ?>" class="img" data-aos="fade-up" data-aos-duration="600">
-            <p class="text"><?php the_field('title_image_right'); ?></p>
-        </div>
-    </div>
-</section>
-
-<!-- Activity -->
-<section id="activity">
-    <div class="container-c">
+    
         <div class="box">
-            <div class="left" data-aos="fade-up" data-aos-duration="600">
-                <img src="<?php the_field('activity_image'); ?>" alt="" class="img">
-            </div>
-            <div class="right" data-aos="fade-up" data-aos-duration="600">
-                <div class="activity-title">
-                    <h4 class="title"><?php the_field('activity_title'); ?></h4>
-                    <a href="<?php echo esc_url(home_url('/activity')); ?>" class="activity-link" rel="noopener noreferrer">もっと見る　＞</a>
-                </div>
-                <div class="desc"><?php the_field('activity_desc'); ?></div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Foundation -->
-<section id="foundation">
-    <div class="container-c">
-        <div class="box">
-            <div class="left">
-                <a href="<?php echo esc_url(home_url('/about')); ?>">
+            <?php 
+            if( have_rows('sharing_list') ):
+            while( have_rows('sharing_list') ) : the_row(); ?>
+            <div class="child">
+                <a href="<?php echo esc_html( get_sub_field('link') ); ?>">
                     <div class="foundation-box-1" data-aos="fade-up" data-aos-duration="600">
+                        <img src="<?php echo esc_html( get_sub_field('image') ); ?>" alt="" class="img">
                         <div class="text">
-                            財団紹介
+                            <?php echo esc_html( get_sub_field('title') ); ?>
                         </div>
-                        <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/building.png" alt="" class="img">
                     </div>
                 </a>
             </div>
-            <div class="right">
-                <a href="<?php echo esc_url(home_url('/service')); ?>">
-                    <div class="foundation-box-2" data-aos="fade-up" data-aos-duration="600">
-                        <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/img-11.png" alt="" class="img">
-                        <div class="text">事業内容</div>
-                    </div>
-                </a>
-            </div>
+            <?php endwhile; endif;?>
         </div>
     </div>
 </section>
+
 
 <!-- Social network -->
 <section id="social-network">

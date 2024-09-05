@@ -98,11 +98,11 @@
     }
 
     &.open {
+        background-color: var(--c-blue-2);
+
         img {
             display: none;
         }
-
-        background-color: var(--c-blue-2);
 
         .toggle-custom {
             &.open {
