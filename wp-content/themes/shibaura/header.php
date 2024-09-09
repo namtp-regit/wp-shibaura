@@ -36,7 +36,7 @@
 
     <div class="header-fix" id="header-fix">
         <a href="<?php echo esc_url(home_url('/')); ?>">
-            <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/logo.png" alt="Avatar Logo" class="logo-mobile">
+            <img src="<?php echo esc_html(get_field('logo', 'option')); ?>" alt="Avatar Logo" class="logo-mobile">
         </a>
         <div id="toggle" class="toggle-custom">
             <span></span>
@@ -59,7 +59,7 @@
             <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="<?php echo esc_url(home_url('/')); ?>">
-                        <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/logo.png" alt="Avatar Logo" class="logo">
+                        <img src="<?php echo esc_html(get_field('logo', 'option')); ?>" alt="Avatar Logo" class="logo">
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#menu-mobile">
@@ -71,6 +71,20 @@
                         <?php
                             wp_nav_menu( array( 'theme_location'=>'my-custom-menu', 'container' => 'ul','menu_class'=>'navbar-nav' ) );
                         ?>
+                        <div class="dropdown dropdown-language">
+                            <?php 
+                            if( have_rows('change_language', 'option') ):
+                            while( have_rows('change_language', 'option') ) : the_row(); ?>
+                                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"><?php echo esc_html(get_sub_field('language_active', 'option')); ?></button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <?php 
+                                if( have_rows('muti', 'option') ):
+                                while( have_rows('muti', 'option') ) : the_row(); ?>
+                                    <li><a class="dropdown-item" href="<?php echo esc_html(get_sub_field('url', 'option')); ?>"><?php echo esc_html(get_sub_field('title', 'option')); ?></a></li>
+                                <?php endwhile; endif;?>
+                            </ul>
+                            <?php endwhile; endif;?>
+                        </div>
                     </div>
                 </div>
             </nav>

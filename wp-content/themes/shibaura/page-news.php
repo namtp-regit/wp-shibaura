@@ -4,7 +4,7 @@ get_header();
 <!-- Banner -->
 <section id="title-page">
     <div class="container-c">
-        <h1 class="txt">お知らせ</h1>
+        <h1 class="txt"><?php the_title(); ?></h1>
     </div>
 </section>
 

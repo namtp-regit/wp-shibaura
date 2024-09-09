@@ -4,7 +4,7 @@ get_header();
 	<!-- Banner -->
     <section id="title-page">
         <div class="container-c">
-            <h1 class="txt">財団紹介</h1>
+            <h1 class="txt"><?php the_title(); ?></h1>
         </div>
     </section>
 
@@ -17,16 +17,15 @@ get_header();
                         <img src="<?php the_field('avatar'); ?>" alt="" class="img" data-aos="fade-up" data-aos-duration="600">
                     </div>
                     <div class="right" data-aos="fade-up" data-aos-duration="600">
-                        <h4 class="title">ご挨拶</h4>
+                        <h4 class="title"><?php the_field('introduce_title'); ?></h4>
                         <div class="desc"><?php the_field('introduce'); ?></div>
-                        <p class="btm">一般財団法人　芝浦文化財団
-                            代表理事　大川伸幸</p>
+                        <p class="btm"><?php the_field('introduce_sub'); ?></p>
                     </div>
                 </div>
             </div>
 
             <div class="about-second" data-aos="fade-up" data-aos-duration="600">
-                <h4 class="about-second-title">法人概要</h4>
+                <h4 class="about-second-title"><?php the_field('overview_title'); ?></h4>
                 <div class="box">
                     <div class="left">
                         <table class="table">
@@ -59,7 +58,7 @@ get_header();
                     </div>
                     <div class="right">
                         <img src="<?php the_field('map_image'); ?>" alt="" class="img">
-                        <a href="<?php the_field('map_url'); ?>" target="_blank" class="c_link">Google Mapsで見る ＞</a>
+                        <a href="<?php the_field('map_url'); ?>" target="_blank" class="c_link"><?php the_field('map_url_title'); ?> ＞</a>
                     </div>
                 </div>
             </div>

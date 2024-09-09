@@ -184,6 +184,24 @@ p {
   }
 }
 
+.dropdown-language {
+  padding-left: 20px;
+}
+.dropdown-language button {
+  outline: unset;
+  color: var(--c-main);
+  padding: 0;
+}
+.dropdown-language button:focus {
+  box-shadow: unset;
+}
+.dropdown-language .dropdown-menu {
+  min-width: 8rem;
+}
+.dropdown-language .dropdown-menu li a {
+  color: var(--c-main);
+}
+
 .header-scrolled {
   position: fixed;
   top: 0;
@@ -695,12 +713,72 @@ p {
 #sharing .sharing-desc br {
   display: none;
 }
+#sharing .owl-sharing {
+  width: calc(100% + 66px);
+  margin-left: -33px;
+  margin-top: 46px;
+  margin-bottom: 93px;
+}
+#sharing .owl-sharing .owl-item .item img {
+  height: 227px;
+  object-fit: cover;
+}
+#sharing .owl-sharing .owl-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+}
+#sharing .owl-sharing .owl-nav:not(.disabled) button {
+  margin: 0;
+}
+#sharing .owl-sharing .owl-nav:not(.disabled) button:hover {
+  background-color: unset;
+  opacity: 0.6;
+}
+#sharing .owl-sharing .owl-nav:not(.disabled) button.owl-prev {
+  margin-left: -30px;
+}
+#sharing .owl-sharing .owl-nav:not(.disabled) button.owl-prev .nav-prev {
+  background: url("../imgs/icon-prev.png") no-repeat;
+  width: 15px;
+  height: 40px;
+  background-size: contain;
+}
+#sharing .owl-sharing .owl-nav:not(.disabled) button.owl-next {
+  margin-right: -30px;
+}
+#sharing .owl-sharing .owl-nav:not(.disabled) button.owl-next .nav-next {
+  background: url("../imgs/icon-next.png") no-repeat;
+  width: 15px;
+  height: 40px;
+  background-size: contain;
+}
+@media screen and (max-width: 1100px) {
+  #sharing .owl-sharing {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  #sharing .owl-sharing {
+    margin-top: 28px;
+    margin-bottom: 67px;
+    width: calc(100% + 38px);
+    margin-left: -19px;
+  }
+  #sharing .owl-sharing .owl-item .item img {
+    height: 171px;
+  }
+}
 #sharing .box {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 36px 60px;
   align-items: center;
-  margin-top: 42px;
 }
 #sharing .box .child > a {
   text-decoration: none;
@@ -752,7 +830,6 @@ p {
   #sharing .box {
     grid-template-columns: 1fr;
     gap: 30px;
-    margin-top: 20px;
   }
   #sharing .box .child .foundation-box-1 {
     height: 138px;

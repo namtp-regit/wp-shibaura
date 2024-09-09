@@ -4,7 +4,7 @@ get_header();
 	<!-- Banner -->
     <section id="title-page">
         <div class="container-c">
-            <h1 class="txt" data-aos="fade-up" data-aos-duration="600">活動実績紹介</h1>
+            <h1 class="txt" data-aos="fade-up" data-aos-duration="600"><?php the_title(); ?></h1>
         </div>
     </section>
 
@@ -12,14 +12,14 @@ get_header();
     <section id="page-activity">
         <div class="container-c">
             <div class="activity-1" data-aos="fade-up" data-aos-duration="600">
-                <h4 class="txt">芝浦文化財団コンサート</h4>
+                <h4 class="txt"><?php the_field('title_block'); ?></h4>
                 <?php if(have_posts()) :the_post(); ?>
                 <div class="desc"><?php the_content() ?>
                 <?php endif; ?>
             </div>
 
             <div class="activity-2">
-                <div class="activity-2-title" data-aos="fade-up" data-aos-duration="600">※下記敬称略</div>
+                <div class="activity-2-title" data-aos="fade-up" data-aos-duration="600"><?php the_field('note'); ?></div>
                 <div class="list">
                     <?php
                         if( have_rows('list_activity') ):
@@ -55,7 +55,7 @@ get_header();
                                         <?php if(get_sub_field('link')): ?>
                                         <div class="media">
                                             <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/icon_yt.png" alt="" class="img-yt">
-                                            <a class="text" href="<?php the_sub_field('link'); ?>" target="_blank">YouTubeを見る　＞</a>
+                                            <a class="text" href="<?php the_sub_field('link'); ?>" target="_blank"><?php the_sub_field('title_link'); ?>　＞</a>
                                         </div>
                                         <?php endif; ?>
                                     </div>

@@ -263,12 +263,91 @@
         }
     }
 
+    .owl-sharing {
+        width: calc(100% + 66px);
+        margin-left: -33px;
+        margin-top: 46px;
+        margin-bottom: 93px;
+
+        .owl-item {
+            .item {
+                img {
+                   height: 227px;
+                   object-fit: cover; 
+                }
+            }
+        }
+
+        .owl-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            margin: 0;
+
+            &:not(.disabled) {
+                button {
+                    margin: 0;
+    
+                    &:hover {
+                        background-color: unset;
+                        opacity: 0.6;
+                    }
+    
+                    &.owl-prev {
+                        margin-left: -30px;
+    
+                        .nav-prev {
+                            background: url('../imgs/icon-prev.png') no-repeat;
+                            width: 15px;
+                            height: 40px;
+                            background-size: contain;
+                        }
+                    }
+    
+                    &.owl-next {
+                        margin-right: -30px;
+    
+                        .nav-next {
+                            background: url('../imgs/icon-next.png') no-repeat;
+                            width: 15px;
+                            height: 40px;
+                            background-size: contain;
+                        }
+                    }
+    
+                }
+            }
+        }
+
+        @media screen and (max-width: 1100px) {
+            width: 100%;
+            margin-left: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            margin-top: 28px;
+            margin-bottom: 67px;
+            width: calc(100% + 38px);
+            margin-left: -19px;
+
+            .owl-item {
+                .item {
+                    img {
+                       height: 171px;
+                    }
+                }
+            }
+        }
+    }
+
     .box {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 36px 60px;
         align-items: center;
-        margin-top: 42px;
 
         .child {
             &>a {
@@ -337,7 +416,6 @@
         .box {
             grid-template-columns: 1fr;
             gap: 30px;
-            margin-top: 20px;
     
             .child {
                 .foundation-box-1 {

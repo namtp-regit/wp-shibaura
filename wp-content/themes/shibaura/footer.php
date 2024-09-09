@@ -17,19 +17,23 @@
             <div class="box">
                 <div class="left">
                     <a href="<?php echo esc_url(home_url('/')); ?>">
-                        <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/logo.png" alt="" class="img">
+                        <img src="<?php echo esc_html(get_field('logo', 'option')); ?>" alt="" class="img">
                     </a>
                 </div>
                 <div class="right">
                     <?php
                     wp_nav_menu(array('theme_location' => 'my-custom-menu', 'container' => 'ul', 'menu_class' => 'nav'));
                     ?>
+                    <?php 
+                    if( have_rows('footer', 'option') ):
+                    while( have_rows('footer', 'option') ) : the_row(); ?>
                     <div class="info">
-                        <p>〒104-0061　東京都中央区銀座3-5-9</p>
-                        <p>TEL：03-6433-1277</p>
-                        <p>mail：zaidan@shibaura-group.co.jp</p>
+                        <p><?php echo esc_html(get_sub_field('address', 'option')); ?></p>
+                        <p>TEL：<?php echo esc_html(get_sub_field('tel', 'option')); ?></p>
+                        <p>mail：<?php echo esc_html(get_sub_field('email', 'option')); ?></p>
                     </div>
-                    <p class="copy-right">©一般財団法人　芝浦文化財団</span>
+                    <p class="copy-right"><?php echo esc_html(get_sub_field('copy_right', 'option')); ?></span>
+                    <?php endwhile; endif;?>
                 </div>
             </div>
         </div>
