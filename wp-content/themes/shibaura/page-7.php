@@ -22,8 +22,8 @@ get_header();
 ?>
 <div id="slider">
     <h3 class="text">
-        <span class="pc"><?php the_field('slider_title'); ?></span>
-        <span class="mobile"><?php the_field('slider_title_mobile'); ?></span>
+        <span class="pc"><?php the_sub_field('slider_title'); ?></span>
+        <span class="mobile"><?php the_sub_field('slider_title_mobile'); ?></span>
     </h3>
     <div class="slideshow">
         <?php
