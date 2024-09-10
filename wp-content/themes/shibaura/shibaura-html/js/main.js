@@ -55,7 +55,7 @@ $(document).ready(function() {
         ],
         responsive: {
             0: {
-                items: 1.4,
+                items: 1.63,
                 center: true,
                 margin: 16,
             },
@@ -72,7 +72,6 @@ $(document).ready(function() {
     })
 
     $(".dropdown-language .dropdown-menu li").on("click", function() {
-        console.log('$(this) :>> ', $(this).children().text());
         $(".dropdown-language button").text($(this).children().text())
     })
 });
