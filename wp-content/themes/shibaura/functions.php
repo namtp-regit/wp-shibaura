@@ -115,6 +115,17 @@ function shibaura_setup()
 }
 add_action('after_setup_theme', 'shibaura_setup');
 
+// create theme setting AFC
+if (function_exists('acf_add_options_page')) {
+	acf_add_options_page(array(
+		'page_title'     => 'ACF Global',
+		'menu_title'    => 'ACF Global',
+		'menu_slug'     => 'theme-general-settings',
+		'capability'    => 'edit_posts',
+		'redirect'        => false
+	));
+}
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *

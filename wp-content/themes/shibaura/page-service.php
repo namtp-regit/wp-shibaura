@@ -4,7 +4,7 @@ get_header();
 <!-- Banner -->
 <section id="title-page">
     <div class="container-c">
-        <h1 class="txt" data-aos="fade-up" data-aos-duration="600">事業内容</h1>
+        <h1 class="txt" data-aos="fade-up" data-aos-duration="600"><?php the_title(); ?></h1>
     </div>
 </section>
 
@@ -72,7 +72,7 @@ get_header();
 
     <div class="service-4">
         <div class="container-c">
-            <h4 class="title">所属演奏者紹介</h4>
+            <h4 class="title"><?php the_field('title_introducing_our_musicians'); ?></h4>
         </div>
         <div class="box-img">
             <div class="container-c">
@@ -86,7 +86,7 @@ get_header();
     <div class="service-5" data-aos="fade-up" data-aos-duration="600">
         <div class="container-c">
             <div class="box">
-                <h4 class="title"><?php the_field('title_last'); ?><span>(エレクトーン・ピアノ)</span></h4>
+                <h4 class="title"><?php the_field('title_last'); ?><span><?php the_field('note_last'); ?></span></h4>
                 <div class="desc"><?php the_field('content'); ?></div>
             </div>
         </div>
@@ -94,6 +94,9 @@ get_header();
 </section>
 
 <!-- Social network -->
+<?php 
+if( have_rows('social_network', 'option') ):
+while( have_rows('social_network', 'option') ) : the_row(); ?>
 <section id="social-network">
     <div class="container-c">
         <div class="box">
@@ -111,8 +114,7 @@ get_header();
                 <div class="media">
                     <div class="media-body">
                         <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/icon_fb.png" alt="" class="media-img">
-                        <p class="media-content">芝浦グループ
-                            facebook</p>
+                        <p class="media-content"><?php echo esc_html(get_sub_field('facebook', 'option')); ?></p>
                         <span class="media-link">
                             <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/arrow-right.png" alt="" class="arrow-img">
                         </span>
@@ -123,8 +125,7 @@ get_header();
                 <div class="media">
                     <div class="media-body">
                         <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/icon_insta.png" alt="" class="media-img">
-                        <p class="media-content">芝浦グループ
-                            Instagram</p>
+                        <p class="media-content"><?php echo esc_html(get_sub_field('instagram', 'option')); ?></p>
                         <span class="media-link">
                             <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/arrow-right.png" alt="" class="arrow-img">
                         </span>
@@ -134,7 +135,11 @@ get_header();
         </div>
     </div>
 </section>
+<?php endwhile; endif;?>
 
+<?php 
+if( have_rows('social_network', 'option') ):
+while( have_rows('social_network', 'option') ) : the_row(); ?>
 <section id="social-network-v2">
     <div class="container-c">
         <div class="box">
@@ -142,8 +147,7 @@ get_header();
                 <div class="media">
                     <div class="media-body">
                         <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/icon_yt.png" alt="" class="media-img">
-                        <p class="media-content">芝浦文化財団所属
-                            川越亮  YouTube</p>
+                        <p class="media-content"><?php echo esc_html(get_sub_field('youtube', 'option')); ?></p>
                         <span class="media-link">
                             <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/arrow-right.png" alt="" class="arrow-img">
                         </span>
@@ -154,8 +158,7 @@ get_header();
                 <div class="media">
                     <div class="media-body">
                         <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/icon_insta.png" alt="" class="media-img">
-                        <p class="media-content">芝浦文化財団所属
-                            川越亮 Instagram</p>
+                        <p class="media-content"><?php echo esc_html(get_sub_field('instagram_2', 'option')); ?></p>
                         <span class="media-link">
                             <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/arrow-right.png" alt="" class="arrow-img">
                         </span>
@@ -165,6 +168,7 @@ get_header();
         </div>
     </div>
 </section>
+<?php endwhile; endif;?>
 
 <?php
 get_footer();

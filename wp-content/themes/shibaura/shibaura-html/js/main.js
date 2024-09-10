@@ -43,4 +43,36 @@ $(document).ready(function() {
         $('#header-fix').toggleClass('open');
         $('#toggle').toggleClass('open');
     })
+
+    $('.owl-sharing').owlCarousel({
+        loop:true,
+        margin: 22,
+        items: 3,
+        dots: false,
+        navText: [
+            '<div class="nav-prev"></div>',
+            '<div class="nav-next"></div>',
+        ],
+        responsive: {
+            0: {
+                items: 1.4,
+                center: true,
+                margin: 16,
+            },
+            500: {
+                items: 2,
+                nav: false,
+                margin: 16,
+            },
+            1000: {
+                items: 3,
+                nav: true,
+            },
+        },
+    })
+
+    $(".dropdown-language .dropdown-menu li").on("click", function() {
+        console.log('$(this) :>> ', $(this).children().text());
+        $(".dropdown-language button").text($(this).children().text())
+    })
 });

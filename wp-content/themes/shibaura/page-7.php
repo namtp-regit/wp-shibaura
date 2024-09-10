@@ -16,6 +16,10 @@
 get_header();
 ?>
 <!-- Slider -->
+<?php
+    if (have_rows('slider')) :
+    while (have_rows('slider')) : the_row();
+?>
 <div id="slider">
     <h3 class="text">
         <span class="pc"><?php the_field('slider_title'); ?></span>
@@ -25,24 +29,25 @@ get_header();
         <?php
         if (have_rows('slider_show')) :
             while (have_rows('slider_show')) : the_row();
+            $useragent = $_SERVER["HTTP_USER_AGENT"];
+            $imageUrl = '';
+            if (stripos($useragent, "mobile") !== false) {
+                $imageUrl = get_sub_field('image_mobile');
+            } else {
+                $imageUrl = get_sub_field('image');
+            }
         ?>
-                <div class="slideshow-image" style="background-image: url('<?php
-                                                                            $useragent = $_SERVER["HTTP_USER_AGENT"];
-                                                                            if (stripos($useragent, "mobile") !== false) {
-                                                                                the_sub_field('image_mobile');
-                                                                            } else {
-                                                                                the_sub_field('image');
-                                                                            }
-                                                                            ?>')"></div>
-        <?php
-            endwhile;
-        else :
-        endif;
-        ?>
+                <div class="slideshow-image" style="background-image: url('<?php echo $imageUrl ?>')"></div>
+        <?php endwhile; endif; ?>
     </div>
 </div>
+<?php endwhile; endif; ?>
 
 <!-- News -->
+<?php
+    if (have_rows('news')) :
+    while (have_rows('news')) : the_row();
+?>
 <section id="news">
     <div class="container-c">
         <div class="box">
@@ -77,17 +82,33 @@ get_header();
                     <?php wp_reset_postdata(); ?>
                 <?php endif; ?>
             </div>
-            <a href="<?php echo esc_url(home_url('/news')); ?>" class="new-link">もっと見る　＞</a>
+            <a href="<?php the_sub_field('link_all'); ?>" class="new-link"><?php the_sub_field('title_link_all'); ?>　＞</a>
         </div>
     </div>
 </section>
+<?php endwhile; endif; ?>
 
 <!-- Sharing -->
+<?php
+    if (have_rows('sharing')) :
+    while (have_rows('sharing')) : the_row();
+?>
 <section id="sharing">
     <div class="container-c">
-        <h3 class="sharing-title"><span class="mark">音楽</span><span>を奏でる喜びと、</span><span>聴く喜びを共に分かち合う</span></h3>
-        <div class="sharing-desc"><?php the_field('sharing_desc'); ?></div>
+        <h3 class="sharing-title"><?php the_sub_field('title'); ?></h3>
+        <div class="sharing-desc"><?php the_sub_field('sharing_desc'); ?></div>
     
+        <div class="owl-carousel owl-theme owl-sharing" data-aos="fade-up" data-aos-duration="600">
+            <?php
+                if (have_rows('sharing_slide')) :
+                while (have_rows('sharing_slide')) : the_row();
+            ?>
+            <div class="item">
+                <img src="<?php the_sub_field('image') ?>" alt="Los Angeles" class="img">
+            </div>
+            <?php endwhile; endif;?>
+        </div>
+
         <div class="box">
             <?php 
             if( have_rows('sharing_list') ):
@@ -106,9 +127,12 @@ get_header();
         </div>
     </div>
 </section>
-
+<?php endwhile; endif;?>
 
 <!-- Social network -->
+<?php 
+if( have_rows('social_network', 'option') ):
+while( have_rows('social_network', 'option') ) : the_row(); ?>
 <section id="social-network">
     <div class="container-c">
         <div class="box">
@@ -126,8 +150,7 @@ get_header();
                 <div class="media">
                     <div class="media-body">
                         <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/icon_fb.png" alt="" class="media-img">
-                        <p class="media-content">芝浦グループ
-                            facebook</p>
+                        <p class="media-content"><?php echo esc_html(get_sub_field('facebook', 'option')); ?></p>
                         <span class="media-link">
                             <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/arrow-right.png" alt="" class="arrow-img">
                         </span>
@@ -138,8 +161,7 @@ get_header();
                 <div class="media">
                     <div class="media-body">
                         <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/icon_insta.png" alt="" class="media-img">
-                        <p class="media-content">芝浦グループ
-                            Instagram</p>
+                        <p class="media-content"><?php echo esc_html(get_sub_field('instagram', 'option')); ?></p>
                         <span class="media-link">
                             <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/arrow-right.png" alt="" class="arrow-img">
                         </span>
@@ -149,7 +171,11 @@ get_header();
         </div>
     </div>
 </section>
+<?php endwhile; endif;?>
 
+<?php 
+if( have_rows('social_network', 'option') ):
+while( have_rows('social_network', 'option') ) : the_row(); ?>
 <section id="social-network-v2">
     <div class="container-c">
         <div class="box">
@@ -157,8 +183,7 @@ get_header();
                 <div class="media">
                     <div class="media-body">
                         <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/icon_yt.png" alt="" class="media-img">
-                        <p class="media-content">芝浦文化財団所属
-                            川越亮  YouTube</p>
+                        <p class="media-content"><?php echo esc_html(get_sub_field('youtube', 'option')); ?></p>
                         <span class="media-link">
                             <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/arrow-right.png" alt="" class="arrow-img">
                         </span>
@@ -169,8 +194,7 @@ get_header();
                 <div class="media">
                     <div class="media-body">
                         <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/icon_insta.png" alt="" class="media-img">
-                        <p class="media-content">芝浦文化財団所属
-                            川越亮 Instagram</p>
+                        <p class="media-content"><?php echo esc_html(get_sub_field('instagram_2', 'option')); ?></p>
                         <span class="media-link">
                             <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/arrow-right.png" alt="" class="arrow-img">
                         </span>
@@ -180,6 +204,7 @@ get_header();
         </div>
     </div>
 </section>
+<?php endwhile; endif;?>
 
 <?php
 get_footer();

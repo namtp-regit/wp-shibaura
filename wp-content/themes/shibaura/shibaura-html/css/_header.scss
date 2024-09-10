@@ -56,7 +56,29 @@
     }
 }
 
+.dropdown-language {
+    padding-left: 20px;
 
+    button {
+        outline: unset;
+        color: var(--c-main);
+        padding: 0;
+        
+        &:focus {
+            box-shadow: unset;
+        }
+    }
+
+    .dropdown-menu {
+        min-width: 8rem;
+
+        li {
+            a {
+                color: var(--c-main);
+            }
+        }
+    }
+}
 
 .header-scrolled {
     position: fixed;
