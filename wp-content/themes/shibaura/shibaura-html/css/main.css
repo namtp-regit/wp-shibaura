@@ -186,11 +186,14 @@ p {
 
 .dropdown-language {
   padding-left: 20px;
+  line-height: 1;
+  padding-bottom: 4px;
 }
 .dropdown-language button {
   outline: unset;
   color: var(--c-main);
   padding: 0;
+  line-height: 1;
 }
 .dropdown-language button:focus {
   box-shadow: unset;
