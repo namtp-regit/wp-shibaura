@@ -59,13 +59,14 @@
 .dropdown-language {
     padding-left: 20px;
     line-height: 1;
-    padding-bottom: 4px;
+    padding-bottom: 2px;
 
     button {
         outline: unset;
         color: var(--c-main);
         padding: 0;
         line-height: 1;
+        font-size: 15px;
         
         &:focus {
             box-shadow: unset;
