@@ -236,6 +236,11 @@ p {
   display: none;
   /* Icon 4 */
 }
+.header-fix .dropdown-language {
+  margin-left: auto;
+  padding: 0;
+  margin-right: 12px;
+}
 @media (max-width: 991.98px) {
   .header-fix {
     display: flex;
@@ -248,6 +253,9 @@ p {
   background-color: var(--c-blue-2);
 }
 .header-fix.open img {
+  display: none;
+}
+.header-fix.open .dropdown-language {
   display: none;
 }
 .header-fix.open .toggle-custom.open span:nth-child(1) {
@@ -286,6 +294,7 @@ p {
   transition: 0.5s ease-in-out;
   cursor: pointer;
   z-index: 9999;
+  margin-top: 10px;
 }
 .header-fix .toggle-custom span {
   display: block;
@@ -320,7 +329,7 @@ p {
   transform-origin: left center;
 }
 .header-fix .toggle-custom span:nth-child(3) {
-  top: 18px;
+  top: 18.5px;
   -webkit-transform-origin: left center;
   -moz-transform-origin: left center;
   -o-transform-origin: left center;
