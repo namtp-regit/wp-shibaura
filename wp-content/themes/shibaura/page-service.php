@@ -18,7 +18,7 @@ get_header();
             <?php the_field('title_4'); ?>
         </div>
 
-        <div class="service-2" data-aos="fade-up" data-aos-duration="600">
+        <div id="espace" class="service-2" data-aos="fade-up" data-aos-duration="600">
             <div class="service-2-title"><?php the_field('title'); ?></div>
             <table class="table">
                 <tbody>
@@ -70,7 +70,7 @@ get_header();
         </div>
     </div>
 
-    <div class="service-4">
+    <div id="introduction" class="service-4">
         <div class="container-c">
             <h4 class="title"><?php the_field('title_introducing_our_musicians'); ?></h4>
         </div>
