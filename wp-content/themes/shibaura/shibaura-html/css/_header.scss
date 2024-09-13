@@ -114,22 +114,32 @@
     padding-right: 20px;
     background-color: var(--c-white);
     display: none;
-
+    
+    .dropdown-language {
+        margin-left: auto;
+        padding: 0;
+        margin-right: 12px;
+    }
+    
     @media (max-width: 991.98px) {
         display: flex;
     }
-
+    
     .logo-mobile {
         width: 141px;
     }
-
+    
     &.open {
         background-color: var(--c-blue-2);
-
+        
         img {
             display: none;
         }
 
+        .dropdown-language {
+            display: none;
+        }
+        
         .toggle-custom {
             &.open {
                 span {
@@ -176,6 +186,7 @@
         transition: 0.5s ease-in-out;
         cursor: pointer;
         z-index: 9999;
+        margin-top: 10px;
 
         span {
             display: block;
@@ -218,7 +229,7 @@
             }
 
             &:nth-child(3) {
-                top: 18px;
+                top: 18.5px;
                 -webkit-transform-origin: left center;
                 -moz-transform-origin: left center;
                 -o-transform-origin: left center;

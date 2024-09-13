@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The header for our theme
  *
@@ -14,12 +15,12 @@
 <html <?php language_attributes(); ?>>
 
 <head>
-    <meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
 
     <?php wp_head(); ?>
-	
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
@@ -32,12 +33,30 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+    <?php wp_body_open(); ?>
 
     <div class="header-fix" id="header-fix">
         <a href="<?php echo esc_url(home_url('/')); ?>">
             <img src="<?php echo esc_html(get_field('logo', 'option')); ?>" alt="Avatar Logo" class="logo-mobile">
         </a>
+
+        <div class="dropdown dropdown-language">
+            <?php
+            if (have_rows('change_language', 'option')):
+                while (have_rows('change_language', 'option')) : the_row(); ?>
+                    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"><?php echo esc_html(get_sub_field('language_active', 'option')); ?></button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <?php
+                        if (have_rows('muti', 'option')):
+                            while (have_rows('muti', 'option')) : the_row(); ?>
+                                <li><a class="dropdown-item" href="<?php echo esc_html(get_sub_field('url', 'option')); ?>"><?php echo esc_html(get_sub_field('title', 'option')); ?></a></li>
+                        <?php endwhile;
+                        endif; ?>
+                    </ul>
+            <?php endwhile;
+            endif; ?>
+        </div>
+
         <div id="toggle" class="toggle-custom">
             <span></span>
             <span></span>
@@ -46,11 +65,11 @@
     </div>
 
     <div class="overlay" id="overlay">
-      <nav class="overlay-menu">
+        <nav class="overlay-menu">
             <?php
-				wp_nav_menu( array( 'theme_location'=>'my-custom-menu', 'container' => 'ul','menu_class'=>'navbar-nav' ) );
-			?>
-      </nav>
+            wp_nav_menu(array('theme_location' => 'my-custom-menu', 'container' => 'ul', 'menu_class' => 'navbar-nav'));
+            ?>
+        </nav>
     </div>
 
     <!-- Header -->
@@ -69,21 +88,23 @@
                     </button>
                     <div class="collapse navbar-collapse" id="collapsibleNavbar">
                         <?php
-                            wp_nav_menu( array( 'theme_location'=>'my-custom-menu', 'container' => 'ul','menu_class'=>'navbar-nav' ) );
+                        wp_nav_menu(array('theme_location' => 'my-custom-menu', 'container' => 'ul', 'menu_class' => 'navbar-nav'));
                         ?>
                         <div class="dropdown dropdown-language">
-                            <?php 
-                            if( have_rows('change_language', 'option') ):
-                            while( have_rows('change_language', 'option') ) : the_row(); ?>
-                                <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"><?php echo esc_html(get_sub_field('language_active', 'option')); ?></button>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                                <?php 
-                                if( have_rows('muti', 'option') ):
-                                while( have_rows('muti', 'option') ) : the_row(); ?>
-                                    <li><a class="dropdown-item" href="<?php echo esc_html(get_sub_field('url', 'option')); ?>"><?php echo esc_html(get_sub_field('title', 'option')); ?></a></li>
-                                <?php endwhile; endif;?>
-                            </ul>
-                            <?php endwhile; endif;?>
+                            <?php
+                            if (have_rows('change_language', 'option')):
+                                while (have_rows('change_language', 'option')) : the_row(); ?>
+                                    <button type="button" class="btn dropdown-toggle" data-bs-toggle="dropdown"><?php echo esc_html(get_sub_field('language_active', 'option')); ?></button>
+                                    <ul class="dropdown-menu dropdown-menu-end">
+                                        <?php
+                                        if (have_rows('muti', 'option')):
+                                            while (have_rows('muti', 'option')) : the_row(); ?>
+                                                <li><a class="dropdown-item" href="<?php echo esc_html(get_sub_field('url', 'option')); ?>"><?php echo esc_html(get_sub_field('title', 'option')); ?></a></li>
+                                        <?php endwhile;
+                                        endif; ?>
+                                    </ul>
+                            <?php endwhile;
+                            endif; ?>
                         </div>
                     </div>
                 </div>
@@ -95,5 +116,3 @@
 
     <!-- wrapper -->
     <div class="wrapper">
-
-

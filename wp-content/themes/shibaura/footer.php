@@ -43,7 +43,7 @@
 </div>
 
 <script src="<?php bloginfo('template_directory'); ?>/shibaura-html/libs/jquery-3.5.1.min.js"></script>
-<script src="<?php bloginfo('template_directory'); ?>/shibaura-html/libs/bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/shibaura-html/libs/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/shibaura-html/libs/owlcarousel/owl.carousel.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/shibaura-html/js/main.js"></script>
