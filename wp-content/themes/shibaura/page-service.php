@@ -70,18 +70,32 @@ get_header();
         </div>
     </div>
 
+    <?php
+        if (have_rows('introducing_our_musicians')) :
+        while (have_rows('introducing_our_musicians')) : the_row();
+    ?>
     <div id="introduction" class="service-4">
         <div class="container-c">
-            <h4 class="title"><?php the_field('title_introducing_our_musicians'); ?></h4>
+            <h4 class="title"><?php the_sub_field('title'); ?></h4>
         </div>
-        <div class="box-img">
-            <div class="container-c">
-                <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/img-9.png" alt="" class="img-1">
+        <div class="box">
+            <div class="child">
+                <img src="<?php the_sub_field('image_left') ?>" alt="" class="img-left">
             </div>
-            <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/img-10.png" alt="" class="img-2" data-aos="fade-left" data-aos-duration="1500">
-            <img src="<?php bloginfo('template_directory'); ?>/shibaura-html/imgs/img-12.png" alt="" class="img-3" data-aos="fade-left" data-aos-duration="1500">
+            <div class="child">
+                <div class="box-img-2" data-aos="fade-left" data-aos-duration="1500">
+                    <div class="box-img__child">
+                        <img src="<?php the_sub_field('image_1') ?>" alt="" class="img-1">
+                    </div>
+                    <div class="box-img__child">
+                        <img src="<?php the_sub_field('image_2') ?>" alt="" class="img-2">
+                        <img src="<?php the_sub_field('image_3') ?>" alt="" class="img-3">
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <?php endwhile; endif;?>
 
     <div class="service-5" data-aos="fade-up" data-aos-duration="600">
         <div class="container-c">
