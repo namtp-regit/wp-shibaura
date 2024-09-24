@@ -1621,14 +1621,14 @@ p {
     grid-template-columns: 1fr;
     height: auto;
   }
+  #service .service-4 .box .child {
+    height: 300px;
+  }
   #service .service-4 .box .child:first-child {
     justify-content: center;
     padding-right: unset;
     order: 2;
     padding: 35px 0 40px;
-  }
-  #service .service-4 .box .child:last-child {
-    height: 300px;
   }
   #service .service-4 .box .child .img-left {
     height: 60px;
