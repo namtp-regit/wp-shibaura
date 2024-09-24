@@ -301,7 +301,7 @@
                             flex-direction: column;
 
                             img {
-                                height: 49%;
+                                height: 48.6%;
                             }
                         }
                     }
@@ -362,6 +362,8 @@
                         gap: 8px;
     
                         .box-img__child {
+                            height: 300px;
+                            
                             &:last-child {
                                 gap: 8px;
                             }
