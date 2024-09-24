@@ -1590,7 +1590,7 @@ p {
   flex-direction: column;
 }
 #service .service-4 .box .child .box-img-2 .box-img__child:last-child img {
-  height: 49%;
+  height: 48.6%;
 }
 @media (max-width: 1000.98px) {
   #service .service-4 .title {
@@ -1640,6 +1640,9 @@ p {
   #service .service-4 .box .child .box-img-2 {
     grid-template-columns: 228px 1fr;
     gap: 8px;
+  }
+  #service .service-4 .box .child .box-img-2 .box-img__child {
+    height: 300px;
   }
   #service .service-4 .box .child .box-img-2 .box-img__child:last-child {
     gap: 8px;
