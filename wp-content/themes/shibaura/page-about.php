@@ -25,7 +25,7 @@ get_header();
             </div>
 
             <div id="company" class="about-second" data-aos="fade-up" data-aos-duration="600">
-                <h4 class="about-second-title"><?php the_field('overview_title'); ?></h4>
+                <h1 class="about-second-title"><?php the_field('overview_title'); ?></h1>
                 <div class="box">
                     <div class="left">
                         <table class="table">
