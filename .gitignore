@@ -1,4 +1,11 @@
+# jp
 wp-config.php
 .htaccess
 wp-content/themes/shibaura/shibaura-html/node_modules/
-en/
+
+# en
+en/.git
+en/.gitignore
+en/wp-config.php
+en/.htaccess
+en/wp-content/themes/shibaura/shibaura-html/node_modules/
