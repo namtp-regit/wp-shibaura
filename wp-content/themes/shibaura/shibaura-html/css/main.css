@@ -1632,6 +1632,7 @@ p {
     padding-right: unset;
     order: 2;
     padding: 35px 0 40px;
+    height: unset;
   }
   #service .service-4 .box .child .img-left {
     height: 60px;
