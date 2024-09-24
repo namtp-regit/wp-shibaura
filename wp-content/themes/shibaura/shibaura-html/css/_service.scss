@@ -294,9 +294,15 @@
                         }
 
                         &:last-child {
-                            display: grid;
-                            grid-template-rows: 1fr 1fr;
+                            // display: grid;
+                            // grid-template-rows: 1fr 1fr;
                             gap: 10px;
+                            display: flex;
+                            flex-direction: column;
+
+                            img {
+                                height: 49%;
+                            }
                         }
                     }
                 }
