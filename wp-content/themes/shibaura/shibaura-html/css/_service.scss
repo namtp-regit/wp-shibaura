@@ -337,15 +337,13 @@
                 height: auto;
     
                 .child {
+                    height: 300px;
+
                     &:first-child {
                         justify-content: center;
                         padding-right: unset;
                         order: 2;
                         padding: 35px 0 40px;
-                    }
-
-                    &:last-child {
-                        height: 300px;
                     }
     
                     .img-left {
