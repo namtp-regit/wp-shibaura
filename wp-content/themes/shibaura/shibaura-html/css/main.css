@@ -1585,9 +1585,12 @@ p {
   object-fit: cover;
 }
 #service .service-4 .box .child .box-img-2 .box-img__child:last-child {
-  display: grid;
-  grid-template-rows: 1fr 1fr;
   gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+#service .service-4 .box .child .box-img-2 .box-img__child:last-child img {
+  height: 49%;
 }
 @media (max-width: 1000.98px) {
   #service .service-4 .title {
